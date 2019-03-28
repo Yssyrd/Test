@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+      <!-- 配置连接数据库的基本信息 -->
+	  <property name="connection.username">root</property>
+	  <property name="connection.password">yss</property>
+	  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	  <property name="connection.url">jdbc:mysql://127.0.0.1:3306/pollute</property>
+	
+	  <!-- 配置 hibernate 的基本信息 -->
+	  <!-- hibernate 所使用的数据库方言 -->
+	  <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>	
+      
+      <!-- 显示查询语句 -->
+      <property name="show_sql">true</property>
+      
+      <!-- 打印执行的SQL语句 -->
+      <property name="format_sql">true</property>
+   
+      <!-- 加载hibernate自动更新数据库结构 -->  
+      <property name="hbm2ddl.auto">update</property>
+      
+      <property name="current_session_context_class">thread</property>
+      <!-- 设定 JDBC 的 Statement 读取数据的时候每次从数据库中取出的记录条数 -->
+
+      <property name="hibernate.jdbc.fetch_size">100</property>
+  	
+      <!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
+
+      <property name="jdbc.batch_size">50</property>
+	
+	  <mapping resource="com/nrs/entites/Data.hbm.xml"/>
+	  <mapping resource="com/nrs/entites/DataMapping.hbm.xml"/>
+	  <mapping resource="com/nrs/entites/InspectedCpy.hbm.xml"/>
+	  <mapping resource="com/nrs/entites/InstrumentInfo.hbm.xml"/>
+	
+    </session-factory>
+</hibernate-configuration>

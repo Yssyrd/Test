@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-7-10 13:32:45 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.nrs.entites.DataMapping" table="DATAMAPPING">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="instrumentId" type="java.lang.String">
+            <column name="INSTRUMENTID" />
+        </property>
+        <property name="aRadial" type="java.lang.String" access="field">
+            <column name="ARADIAL" />
+        </property>
+        <property name="bRadial" type="java.lang.String" access="field">
+            <column name="BRADIAL" />
+        </property>
+        <property name="rRadial" type="java.lang.String" access="field">
+            <column name="RRADIAL" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="serials" type="java.lang.String">
+            <column name="SERIALS" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        
+        <property name="aThreshold" type="java.lang.String">
+            <column name="A_THRESHOLD" />
+        </property>
+         <property name="bThreshold" type="java.lang.String">
+            <column name="B_THRESHOLD" />
+        </property>
+         <property name="rThreshold" type="java.lang.String">
+            <column name="R_THRESHOLD" />
+        </property>
+        
+        <property name="loginDate" type="java.sql.Timestamp">
+            <column name="LOGINDATE" />
+        </property>
+        <property name="logoutDate" type="java.sql.Timestamp">
+            <column name="LOGOUTDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

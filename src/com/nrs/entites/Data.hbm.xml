@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-27 20:38:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.nrs.entites.Data" table="DATA">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="frontSide" type="java.lang.String">
+            <column name="FRONTSIDE" />
+        </property>
+        <property name="oppositeSide" type="java.lang.String">
+            <column name="OPPOSITESIDE" />
+        </property>
+        <property name="leftSide" type="java.lang.String">
+            <column name="LEFTSIDE" />
+        </property>
+        <property name="rightSide" type="java.lang.String">
+            <column name="RIGHTSIDE" />
+        </property>
+        <property name="inputDate" type="java.sql.Timestamp">
+            <column name="INPUT_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>
